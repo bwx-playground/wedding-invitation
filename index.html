@@ -25,7 +25,7 @@
     <!-- Audio Player -->
     <audio id="background-music" autoplay loop>
         <!-- Replace "wedding_song.mp3" with the name of your local music file -->
-        <source src="akad.mp3" type="audio/mpeg">
+        <source src="hari-yang-mantap.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -40,7 +40,7 @@
     <div class="bg-white p-6 md:p-12 rounded-2xl shadow-xl max-w-lg w-full text-center">
 
         <!-- Wedding Invitation Title -->
-        <h1 class="dancing-script text-3xl sm:text-4xl md:text-5xl text-gray-800 font-bold mb-8 md:mb-12">Wedding Invitation</h1>
+        <h1 class="dancing-script text-4xl sm:text-5xl md:text-5xl text-gray-800 font-bold mb-8 md:mb-12">Wedding Invitation</h1>
 
         <!-- To Recipient -->
         <div class="mb-6 md:mb-8">
@@ -57,15 +57,12 @@
 
         <!-- Couple's Names -->
         <div class="mb-4">
-            <h2 class="text-2xl sm:text-3xl uppercase tracking-wide text-gray-800 font-bold">LUCIA & ICHSAN</h2>
+            <h2 class="text-xl sm:text-xl uppercase tracking-wide text-gray-800 font-bold">LUCIA & ICHSAN</h2>
         </div>
 
         <!-- Date and Location -->
-        <p class="text-xs sm:text-sm text-gray-600 font-medium">
-            5TH OCTOBER 2025
-        </p>
         <p class="text-xs sm:text-sm text-gray-600 font-medium mb-8 md:mb-12">
-            at Halaman Dining
+            5TH OCTOBER 2025
         </p>
         
         <!-- Separator Line -->
@@ -89,7 +86,7 @@
                     <p class="text-base font-bold">11:00 AM</p>
                 </div>
                 <div class="w-full sm:w-2/3 text-center sm:text-left sm:pl-4">
-                    <p class="text-base">Akad</p>
+                    <p class="text-base">Akad Nikah</p>
                 </div>
             </div>
 
@@ -103,14 +100,109 @@
             </div>
         </div>
 
-        <!-- Location Map -->
-        <div class="mt-8">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">Location Map</h3>
-            <div class="flex justify-center">
-                <!-- This is a placeholder for a Google Maps or other map embed -->
-                <!-- You can replace this with a real map embed or an image of the map -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9330649791027!2d106.7668442!3d-6.2725324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f18a5a44a29f%3A0xb34b3210dafdbbd8!2sHalaman%20Dining!5e0!3m2!1sen!2sid!4v1756820082088!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Separator Line -->
+        <hr class="border-gray-300 w-1/2 mx-auto mb-8 md:mb-12">
+
+        <!-- Akad Section -->
+        <div class="mt-8 text-gray-800">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Akad</h3>
+            <div class="space-y-4">
+                <p class="text-sm">Sunday, 05 October 2025</p>
+                <p class="text-sm">Time: 10.30am - 12.00pm</p>
+                <p class="text-sm">Halaman Dining.</p>
+                <p class="text-sm">Jl. Deplu Raya No.16, RT.1/RW.3, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330</p>
             </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center mt-6 space-y-4 sm:space-y-0 sm:space-x-4">
+                <!-- Google Maps Button -->
+                <a href="https://maps.app.goo.gl/5ooTQQaiW3QuqfL69" target="_blank" class="inline-block px-6 py-3 bg-gray-800 text-white font-bold rounded-full shadow-lg hover:bg-gray-700 transition duration-300 ease-in-out">
+                    Google Maps
+                </a>
+                <!-- Add to Calendar Button -->
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akad%20Ceremony%20of%20Lucia%20%26%20Ichsan&dates=20251005T103000/20251005T120000&details=You%20are%20invited%20to%20the%20wedding%20of%20Lucia%20and%20Ichsan.&location=Halaman%20Dining.%20Jl.%20Deplu%20Raya%20No.16,%20RT.1%2FRW.3,%20Bintaro,%20Kec.%20Pesanggrahan,%20Kota%20Jakarta%20Selatan,%20Daerah%20Khusus%20Ibukota%20Jakarta%2012330" target="_blank" class="inline-block px-6 py-3 bg-gray-800 text-white font-bold rounded-full shadow-lg hover:bg-gray-700 transition duration-300 ease-in-out">
+                    Add to Calendar
+                </a>
+            </div>
+        </div>
+
+        <!-- Separator Line -->
+        <hr class="border-gray-300 w-1/2 mx-auto mt-8 mb-8 md:mt-12 md:mb-12">
+        
+        <!-- RSVP Section -->
+        <div class="mt-8 text-gray-800">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">RSVP</h3>
+            <p class="text-sm mb-6">Please kindly confirm your attendance by filling out the form below.</p>
+            
+            <form id="rsvp-form" class="w-full bg-gray-100 p-6 rounded-lg shadow-inner text-left">
+                <div class="mb-4">
+                    <label for="guest-name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                    <input type="text" id="guest-name" name="guest-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500">
+                </div>
+                <div class="mb-6">
+                    <p class="block text-sm font-medium text-gray-700 mb-2">We hope you can come! Please let us know if you'll be able to attend.</p>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="Yes, with pleasure!" required class="form-radio text-gray-800">
+                            <span class="ml-2 text-sm text-gray-700">Yes, with pleasure!</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" name="attendance" value="Regrettably can't make it, but wishing you all the best!">
+                            <span class="ml-2 text-sm text-gray-700">Regrettably can't make it, but wishing you all the best!</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 bg-gray-800 text-white font-bold rounded-full shadow-lg hover:bg-gray-700 transition duration-300 ease-in-out">
+                    Submit RSVP
+                </button>
+            </form>
+        </div>
+
+        <!-- Separator Line -->
+        <hr class="border-gray-300 w-1/2 mx-auto mt-8 mb-8 md:mt-12 md:mb-12">
+
+        <!-- Share Love Section -->
+        <div class="mt-8 text-gray-800">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Share Love</h3>
+            <p class="text-sm mb-6">Your presence at our wedding is the greatest gift. However, if you wish to honor us with a gift, a financial contribution would be greatly appreciated.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8">
+                <!-- Bank 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm w-full md:w-1/2">
+                    <h4 class="text-lg font-bold mb-2">BCA</h4>
+                    <div class="flex items-center justify-center mb-2">
+                        <p class="text-sm mr-0" id="bca-account-number">1781200919</p>
+                        <button class="flex items-center p-1 rounded-full text-gray-500 hover:text-gray-700" title="Copy to clipboard" onclick="copyToClipboard('bca-account-number', this)">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v1M16 11H4v8a2 2 0 002 2h12a2 2 0 002-2v-8z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-sm font-semibold mb-4">A.N. Lucia W</p>
+                    <img src="bca.jpg" alt="QR Code" class="w-32 h-32 mx-auto rounded-lg">
+                </div>
+                <!-- Bank 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm w-full md:w-1/2">
+                    <h4 class="text-lg font-bold mb-2">Mandiri</h4>
+                    <div class="flex items-center justify-center mb-2">
+                        <p class="text-sm mr-0" id="mandiri-account-number">1750000848373</p>
+                        <button class="flex items-center p-1 rounded-full text-gray-500 hover:text-gray-700" title="Copy to clipboard" onclick="copyToClipboard('mandiri-account-number', this)">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v1M16 11H4v8a2 2 0 002 2h12a2 2 0 002-2v-8z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-sm font-semibold mb-4">A.N. Ichsan W</p>
+                    <img src="mandiri.png" alt="QR Code" class="w-32 h-32 mx-auto rounded-lg">
+                </div>
+            </div>
+        </div>
+
+        <!-- Separator Line -->
+        <hr class="border-gray-300 w-1/2 mx-auto mt-8 mb-8 md:mt-12 md:mb-12">
+
+        <!-- Thank You Section -->
+        <div class="mt-8 text-gray-800">
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Thank You</h3>
+            <p class="text-sm mb-4">Thank you for being a part of our special day. Your love and support mean the world to us.</p>
         </div>
     </div>
     
@@ -147,7 +239,6 @@
             // --- You can add more names here ---
             // The key is the subdomain, and the value is the name to display.
             const invitedGuests = {
-                'test': "For & purpose",
                 'dinar': 'Dinar & Partner',
                 'linda': 'Linda & Family',
                 'john': 'John Smith',
@@ -160,6 +251,46 @@
             } else {
                 recipientNameElement.textContent = ''; // Make it blank if no match
             }
+
+            // Custom Form to Google Form Integration
+            const rsvpForm = document.getElementById('rsvp-form');
+            rsvpForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const guestName = document.getElementById('guest-name').value;
+                const attendance = document.querySelector('input[name="attendance"]:checked').value;
+
+                // IMPORTANT: Replace with your actual Google Form URL and entry IDs
+                const formBaseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeC-nCGEaLQI3CSn0kDBGFA0-2H85d833HIXI57xRMxDt47kQ/viewform";
+                const entryIdName = "852498370";
+                const entryIdAttendance = "510556422";
+
+                // Construct the pre-filled URL
+                const prefilledUrl = `${formBaseUrl}?usp=pp_url&entry.${entryIdName}=${encodeURIComponent(guestName)}&entry.${entryIdAttendance}=${encodeURIComponent(attendance)}`;
+
+                // Open the pre-filled Google Form in a new tab
+                window.open(prefilledUrl, '_blank');
+            });
+
+            // Function to copy text to clipboard
+            window.copyToClipboard = (elementId, button) => {
+                const textToCopy = document.getElementById(elementId).textContent;
+                const originalContent = button.innerHTML;
+                
+                // Copy the text to the clipboard
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                // Provide visual feedback
+                button.innerHTML = 'Copied!';
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                }, 2000); // Revert back to icon after 2 seconds
+            };
         });
     </script>
 </body>
