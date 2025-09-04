@@ -230,7 +230,7 @@
             // Dynamically set recipient name based on URL query parameter
             const recipientNameElement = document.getElementById('recipient-name');
             const params = new URLSearchParams(window.location.search);
-            const queryRecipientName = params.get('invitation');
+            const queryRecipientName = params.get('to');
 
             // --- You can add more names here, using the query parameter value as the key ---
             const invitedGuests = {
