@@ -45,14 +45,14 @@
         <!-- To Recipient -->
         <div class="mb-6 md:mb-8">
             <p class="text-xs sm:text-sm tracking-widest text-gray-600 font-bold mb-1">TO:</p>
-            <p id="recipient-name" class="text-base sm:text-lg uppercase text-gray-800 tracking-wide font-medium"></p>
+            <p id="recipient-name" class="text-base sm:text-lg text-gray-800 tracking-wide font-bold"></p>
         </div>
 
         <!-- Illustration Image -->
         <!-- This is a placeholder for the illustration from the image. -->
         <!-- You can replace this with your own image URL. -->
         <div class="flex justify-center items-center mb-6 md:mb-8">
-            <img src="illustration.png" alt="Illustration of a happy couple" class="w-full h-auto rounded-lg shadow-md max-w-sm">
+            <img src="img-illustration.png" alt="Illustration of a happy couple" class="w-full h-auto rounded-lg shadow-md max-w-sm">
         </div>
 
         <!-- Couple's Names -->
@@ -62,7 +62,7 @@
 
         <!-- Date and Location -->
         <p class="text-xs sm:text-sm text-gray-600 font-medium mb-8 md:mb-12">
-            5TH OCTOBER 2025
+            OCTOBER 5TH, 2025
         </p>
         
         <!-- Separator Line -->
@@ -103,13 +103,11 @@
         <!-- Separator Line -->
         <hr class="border-gray-300 w-1/2 mx-auto mb-8 md:mb-12">
 
-        <!-- Akad Section -->
+        <!-- Location Section -->
         <div class="mt-8 text-gray-800">
-            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Akad</h3>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-4">Location</h3>
             <div class="space-y-4">
-                <p class="text-sm">Sunday, 05 October 2025</p>
-                <p class="text-sm">Time: 10.30am - 12.00pm</p>
-                <p class="text-sm">Halaman Dining.</p>
+                <p class="text-sm font-semibold mb-4">Halaman Dining.</p>
                 <p class="text-sm">Jl. Deplu Raya No.16, RT.1/RW.3, Bintaro, Kec. Pesanggrahan, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12330</p>
             </div>
             <!-- Action Buttons -->
@@ -131,7 +129,7 @@
         <!-- RSVP Section -->
         <div class="mt-8 text-gray-800">
             <h3 class="text-xl sm:text-2xl font-semibold mb-4">RSVP</h3>
-            <p class="text-sm mb-6">Please kindly confirm your attendance by filling out the form below.</p>
+            <p class="text-sm mb-6">Please confirm your attendance by filling out the form below. Kindly reply no later than <strong>September 21th, 2025</strong>.</p>
             
             <form id="rsvp-form" class="w-full bg-gray-100 p-6 rounded-lg shadow-inner text-left">
                 <div class="mb-4">
@@ -176,8 +174,8 @@
                             </svg>
                         </button>
                     </div>
-                    <p class="text-sm font-semibold mb-4">A.N. Lucia W</p>
-                    <img src="bca.jpg" alt="QR Code" class="w-32 h-32 mx-auto rounded-lg">
+                    <p class="text-sm font-semibold mb-4">a.n. Lucia W</p>
+                    <img src="img-bca.jpg" alt="QR Code" class="w-20 h-20 mx-auto rounded-lg">
                 </div>
                 <!-- Bank 2 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-sm w-full md:w-1/2">
@@ -190,8 +188,8 @@
                             </svg>
                         </button>
                     </div>
-                    <p class="text-sm font-semibold mb-4">A.N. Ichsan W</p>
-                    <img src="mandiri.png" alt="QR Code" class="w-32 h-32 mx-auto rounded-lg">
+                    <p class="text-sm font-semibold mb-4">a.n. Ichsan W</p>
+                    <img src="img-mandiri.png" alt="QR Code" class="w-20 h-20 mx-auto rounded-lg">
                 </div>
             </div>
         </div>
@@ -202,6 +200,9 @@
         <!-- Thank You Section -->
         <div class="mt-8 text-gray-800">
             <h3 class="text-xl sm:text-2xl font-semibold mb-4">Thank You</h3>
+            <div class="flex justify-center my-4">
+                <img src="img-thank-you.png" alt="A photo of the happy couple" class="w-full max-w-xs md:max-w-sm rounded-lg shadow-md">
+            </div>
             <p class="text-sm mb-4">Thank you for being a part of our special day. Your love and support mean the world to us.</p>
         </div>
     </div>
@@ -226,28 +227,84 @@
                 }
             });
 
-            // Dynamically set recipient name based on subdomain
+            // Dynamically set recipient name based on URL query parameter
             const recipientNameElement = document.getElementById('recipient-name');
-            const hostnameParts = window.location.hostname.split('.');
-            let subdomain = '';
+            const params = new URLSearchParams(window.location.search);
+            const queryRecipientName = params.get('invitation');
 
-            // Check if a subdomain exists (e.g., dinar.example.com)
-            if (hostnameParts.length > 2) {
-                subdomain = hostnameParts[0].toLowerCase();
-            }
-
-            // --- You can add more names here ---
-            // The key is the subdomain, and the value is the name to display.
+            // --- You can add more names here, using the query parameter value as the key ---
             const invitedGuests = {
-                'dinar': 'Dinar & Partner',
-                'linda': 'Linda & Family',
-                'john': 'John Smith',
+                'mamarini': 'Wastini & Keluarga',
+                'rintul': 'Sefti Kusrini & Partner',
+                'nuri': 'Nuriyanti Andreas & Roy',
+                'eleh': 'Tri Marga Saputro & Dessy Heryani',
+                'lekmoh': 'Muchriyono & Saidah',
+                'makorok': 'Mak Orok & Keluarga',
+                'makonyo': 'Keluarga Mak Onyo',
+                'rusman': 'Rusman Marpaung & Ayu Kartika Hening',
+                'alfa': 'Krisan Alfa Timur & Fitria Faradilla',
+                'ibnu': 'Ahmad Ibnu Kamal & Pera Perianawati',
+                'adi': 'Nuryadi Santoso & Partner',
+                'yoga': 'Yoga Darma Bendesa Putra & Dayu Selfi Raesa Andrea',
+                'firli': 'Nurfirliana Muzanella & Istri',
+                'brili': 'Afif Fahmi Brilian & Istri',
+                'ngeng': 'Rizky Kharisma & Partner',
+                'dzul': 'Dzulqarnain & Partner',
+                'syaiful': 'Akhmad Syaiful Yamang & Istri',
+                'agie': 'Agie Ghazy Falah & Istri',
+                'fikri': 'Fikri Reza Alhadi & Amanah Shobriyati',
+                'yanun': 'Muhamad Yanun As`at & Istri',
+                'andi': 'Andi Yulistyo & Istri',
+                'wahyu': 'Wahyu Kristiantono Putro & Partner',
+                'bintang': 'Bintang Karunia Akbar & Istri',
+                'jessica': 'Jessica Hartanto & Partner',
+                'oyong': 'Dinarruni Rulifia & Partner',
+                'peti': 'Peti Ariyastuti & Partner',
+                'ita': 'Ita Purnama Ningsih & Partner',
+                'diahe': 'Rodiah Makmun & Yoppi Hardinas',
+                'subil': 'Billi Descapurnawan & Istri',
+                'uci': 'Suci Darulyani & Suami',
+                'gori': 'Rian Safitri & Triadi Prastoto',
+                'ho': 'Ho Young Lee & Wife',
+                'ria': 'Ria Tanusendjaja & Partner',
+                'gilang': 'Gilang Indra Putra & Istri',
+                'desi': 'Desi Permata Putri & Suami',
+                'ess': 'Afandianto & Istri',
+                'alex': 'Aries Prasetya & Istri',
+                'farida': 'Faridah & Partner',
+                'izza': 'Nurul Izza & Partner',
+                'bunyul': 'Yuli Maharjanti & Suami',
+                'tuti': 'Tuti Awaliyah & Suami',
+                'mbeng': 'Bambang Imam Saputra & Partner',
+                'ical': 'Faisal Ardi & Istri',
+                'lia': 'Novita Amalia & Suami',
+                'diki': 'Dicky Suryo Pratomo & Feriawati',
+                'yudha': 'Yudha Putra Pratama & Istri',
+                'hilman': 'Hilman Haris & Istri',
+                'anne': 'Anne Fathana & Istri',
+                'puspi': 'Amanda Puspita & Partner',
+                'tia': 'Mutiara Pratiwi & Suami',
+                'tika': 'Datika Harliana & Partner',
+                'tiara': 'Tiara Pratiwi Buono & Mochamad Recky',
+                'ayu': 'Triasih Ayu Lestari & Irham Hanifan',
+                'niken': 'NIken Sutiesna & Partner',
+                'della': 'Dewita Laras & Partner',
+                'deci': 'Agnes Desiyana & keluarga',
+                'emspoy': 'Emmanuela Kristianti Retno Widyantari & Partner',
+                'finette': 'Finette Aprlia & Suami',
             };
 
-            const guestName = invitedGuests[subdomain];
+            const guestName = invitedGuests[queryRecipientName];
 
             if (guestName) {
-                recipientNameElement.textContent = guestName;
+                if (guestName.length > 32 && guestName.includes('&')) {
+                    const ampersandIndex = guestName.indexOf('&');
+                    const firstLine = guestName.substring(0, ampersandIndex).trim();
+                    const secondLine = guestName.substring(ampersandIndex).trim();
+                    recipientNameElement.innerHTML = `${firstLine}<br>${secondLine}`;
+                } else {
+                    recipientNameElement.textContent = guestName;
+                }
             } else {
                 recipientNameElement.textContent = ''; // Make it blank if no match
             }
